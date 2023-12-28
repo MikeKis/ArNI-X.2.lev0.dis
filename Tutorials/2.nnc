@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SNN>
+  <RECEPTORS name="R" n="100">
+    <Implementation lib="fromFile">
+    	<args>
+	   <noise>0.3</noise>
+    	</args>
+    </Implementation>
+  </RECEPTORS>
+  <NETWORK>
+    <Sections>
+	<Section name="E">
+	   <props>
+		<n>700</n>
+		<chartime>10</chartime>
+        	<threshold_decay_period>30</threshold_decay_period>
+        	<threshold_inc>1</threshold_inc>
+	   </props>
+	</Section>
+	<Section name="I">
+	   <props>
+		<n>300</n>
+		<chartime>3</chartime>
+	   </props>
+	</Section>
+	<Link from="R" to="E">
+	   <weight>1</weight>
+      	   <probability>0.03</probability>
+	</Link>
+	<Link from="E" to="E">
+	   	<weight>1</weight>
+	      	<probability>0.1</probability>
+	      	<Delay type="uni">
+			<min>1</min>
+			<max>30</max>
+	      	</Delay>
+	</Link>
+	<Link from="E" to="I">
+	   	<weight>1</weight>
+	      	<probability>0.1</probability>
+	      	<Delay type="uni">
+			<min>1</min>
+			<max>30</max>
+	      	</Delay>
+	</Link>
+	<Link from="I" to="E">
+	   	<weight>-10</weight>
+	      	<probability>0.3</probability>
+	</Link>
+	<Link from="I" to="I">
+	   	<weight>-10</weight>
+	      	<probability>0.3</probability>
+	</Link>
+    </Sections>
+  </NETWORK>
+</SNN>  

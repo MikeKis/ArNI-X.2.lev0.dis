@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SNN>
+  <RECEPTORS name="R" n="10">
+    <Implementation lib="fromFile">
+    	<args>
+	   <noise>0.3</noise>
+    	</args>
+    </Implementation>
+  </RECEPTORS>
+  <NETWORK>
+    <Sections>
+	<Section name="neuron">
+	   <props>
+		<n>1</n>
+		<chartime>10</chartime>
+	   </props>
+	</Section>
+	<Link from="R" to="neuron" policy="all-to-all">
+	   <weight>1</weight>
+	</Link>
+    </Sections>
+  </NETWORK>
+</SNN>  
