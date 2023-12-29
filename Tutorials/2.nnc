@@ -4,6 +4,7 @@
     <Implementation lib="fromFile">
     	<args>
 	   <noise>0.3</noise>
+	   <history_length>300</history_length>
     	</args>
     </Implementation>
   </RECEPTORS>
