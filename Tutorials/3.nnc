@@ -13,7 +13,7 @@
 	   <props>
 		<n>3</n>
 		<chartime>2</chartime>
-		<weightinc>0.136</weightinc>
+		<weight_inc>0.136</weight_inc>
 		<stability_resource_change_ratio>0.2</stability_resource_change_ratio>
 		<minweight>-0.0125</minweight>
 		<maxweight>1.166</maxweight>
