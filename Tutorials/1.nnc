@@ -2,7 +2,7 @@
 <SNN>
   <RECEPTORS name="R" n="10">
     <Implementation lib="fromFile">
-    	<args>
+    	<args type="none">
 	   <noise>0.3</noise>
 	   <history_length>1000</history_length>
     	</args>

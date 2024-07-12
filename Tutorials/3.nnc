@@ -2,7 +2,7 @@
 <SNN>
   <RECEPTORS name="R" n="961">
     <Implementation lib="fromFile">
-    	<args>
+    	<args type="text">
 	   <source>clusters.txt</source>
     	</args>
     </Implementation>
